@@ -381,6 +381,7 @@ class QueueTask extends QueueAppModel {
 					array("{$this->alias}.scheduled_end >=" => $now),
 					array("{$this->alias}.scheduled_end" => null),
 				),
+				"{$this->alias}.cpu_limit = null",
 			),
 			array( //Look for restricted by cpu
 				"{$this->alias}.is_restricted" => true,
